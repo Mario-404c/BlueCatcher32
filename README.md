@@ -12,7 +12,7 @@
 
 Ever wondered if there's a way to share music with your friend's headphones? BlueCatcher32 is the solution i came with.
 
-This program uses 3 Esp-32 boards to catch the Bluetooth music packets from your phones, and share it via I2S protocol with two pair of headphones. This way you can listen to music in real time with your friends.
+This program uses 3 Esp-32 boards to catch the Bluetooth music packets from your phones, and share it via I2S protocol with two pair of esp32, that then send them to two pairs of headphones via bluetooth. This way you can listen to music in real time with your friends.
 
 
 
@@ -30,17 +30,17 @@ Core ESP32 for Arduino (board manager — verify to have installed "ESP32 Dev Mo
 
 
 
-The flow starts from the first esp-32, called master. This board creates a Bluetooth sink, and catches Bluetooth packets from your phone, then it resends it via cable with I2S protocol to the other 2 boards. In my case the master is a Esp-32 Wroover module from freenove, but you can also use just a regoular esp-32.
+The flow starts from the first esp-32, called master. This board creates a Bluetooth sink, and catches Bluetooth packets from your phone, then it resends it via cable with I2S protocol to the other 2 boards. In my case the master is a Esp-32 Wroover module from freenove, but you can also use just a regular esp-32.
 
 The I2S protocol uses 3 cables to communicate:
 
 * BCLK : Bit Clock 
 * WS / LRCLK — Word Select : This signal tells us from wich channel is the data that is coming (Left or Right)
-* DATA 
+* DATA : Data of the packets
 
 
 
-Each of the 2 independent boards receives the audio over the I2S cable connection and stores it in memory using a DMA (Direct Memory Access) buffer. I used DMA to avoid burdening the CPU.
+Each of the 2 secondary boards receives the audio over the I2S cable connection and stores it in memory using a DMA (Direct Memory Access) buffer. I used DMA to avoid burdening the CPU.
 
 Then, the program creates a ring buffer of 32KB, a task writes the data from memory at the end of the buffer, then, the function get\_audio\_data() takes data when it needs it at the start of the buffer.
 
