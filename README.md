@@ -62,7 +62,7 @@ I designed a custom PCB for this project using EasyEDA.
 
 
 
-![Schematic of the project](/hardware/schematic.png)
+![Schematic of the project](../hardware/schematic.png)
 
 
 
