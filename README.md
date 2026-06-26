@@ -66,11 +66,11 @@ I designed a custom PCB for this project using EasyEDA.
 
 
 
-\- `.hardware/EasyEDA_files.json/` — EasyEDA project files (editable)
+[EasyEDA_project](hardware/EasyEDA_files.json) - EasyEDA project file
 
-\- `hardware/Schematic.png` — Schematic for reference
+[Schematic](hardware/Schematic.png) - Schematic
 
-\- `hardware/PCB.png` — PCB layout
+[PCB](hardware/PCB.png) - PCB layout
 
 
 
