@@ -62,15 +62,15 @@ I designed a custom PCB for this project using EasyEDA.
 
 
 
-![Schematic of the project](../hardware/Schematic.png)
+![Schematic of the project](hardware/Schematic.png)
 
 
 
-\- `../hardware/EasyEDA_files.json/` — EasyEDA project files (editable)
+\- `.hardware/EasyEDA_files.json/` — EasyEDA project files (editable)
 
-\- `../hardware/Schematic.png` — Schematic for reference
+\- `hardware/Schematic.png` — Schematic for reference
 
-\- `../hardware/PCB.png` — PCB layout
+\- `hardware/PCB.png` — PCB layout
 
 
 
