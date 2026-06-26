@@ -1,4 +1,4 @@
-\# BlueCatcher32
+# BlueCatcher32
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-\## Overview
+## Overview
 
 
 
@@ -16,7 +16,7 @@ This program uses 3 Esp-32 boards to catch the Bluetooth music packets from your
 
 
 
-\## Dependencies
+## Dependencies
 
 
 
@@ -26,7 +26,7 @@ Core ESP32 for Arduino (board manager — verify to have installed "ESP32 Dev Mo
 
 
 
-\## How it works:
+## How it works:
 
 
 
@@ -62,7 +62,7 @@ I designed a custom PCB for this project using EasyEDA.
 
 
 
-!\[Schematic of the project](/hardware/schematic.png)
+![Schematic of the project](/hardware/schematic.png)
 
 
 
